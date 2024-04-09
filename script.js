@@ -26,7 +26,11 @@ console.log(`Result after subtracting number1 from number2 is ${subtractionResul
 //Multiply the result by the third number.
 const multiplicationResult = subtractionResult * number3;
 console.log(`Result of multiplying subtraction result with number3 is ${multiplicationResult}`)
+
+
 //Find the remainder of dividing the result by the fourth number.
+const remainder = multiplicationResult % number4;
+console.log(`The remainder of dividing the result by the fourth number is ${remainder}`)
 
 // Part 1: Math Problems - End
 //-----------------------------------------------------------------------------------------
