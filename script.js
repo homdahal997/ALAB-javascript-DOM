@@ -16,9 +16,16 @@ const firstNumberGreaterThanLast = number1 > number4
 console.log(`Is first number greater than last number? ${firstNumberGreaterThanLast}`)
 
 
-//Accomplish the following arithmetic chain:
+//-------Accomplish the following arithmetic chain:--------
 //Subtract the first number from the second number.
+const subtractionResult = number2 - number1;
+console.log(`Result after subtracting number1 from number2 is ${subtractionResult}`);
+
+
+
 //Multiply the result by the third number.
+const multiplicationResult = subtractionResult * number3;
+console.log(`Result of multiplying subtraction result with number3 is ${multiplicationResult}`)
 //Find the remainder of dividing the result by the fourth number.
 
 // Part 1: Math Problems - End
