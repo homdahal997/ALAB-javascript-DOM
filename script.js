@@ -52,3 +52,43 @@ The average cost of fuel is $3 per gallon.
 Set up a program to answer the following questions:
  */
 
+// constants
+const tripDistance = 1500;
+const fuelbudget = 175;
+const fuelCostPerGallon = 3;
+
+//fuel efficiencies
+const efficiency55Mph = 30;
+const efficiency60Mph = 28;
+const efficiency75Mph = 23;
+
+// Calculate fuel needed for each speed
+const fuelNeeded55Mph = tripDistance / efficiency55Mph;
+const fuelNeeded60Mph = tripDistance / efficiency60Mph;
+const fuelNeeded75Mph = tripDistance / efficiency75Mph;
+
+// Trip duration for each speed
+let duration55Mph = tripDistance / 55;
+let duration60Mph = tripDistance / 60;
+let duration75Mph = tripDistance / 75;
+
+//Fuel expenses for each speed
+const fuelExpense55Mph = fuelNeeded55Mph * fuelCostPerGallon;
+const fuelExpense60Mph = fuelNeeded60Mph * fuelCostPerGallon;
+const fuelExpense75Mph = fuelNeeded75Mph * fuelCostPerGallon;
+
+//is budget engough ?
+let isBudgetEnough55Mph = fuelExpense55Mph <= fuelbudget ? "yes" : "No";
+let isBudgetEnough60Mph = fuelExpense60Mph <= fuelbudget;
+let isBudgetEnough75Mph = fuelExpense75Mph <= fuelbudget;
+
+// Lets compare result for each speed
+
+const comparisonResults = `
+Results for traveling at 55 mph:
+Gallons of fuel needed: ${fuelNeeded55Mph}
+Will the budget cover the fuel expense? ${isBudgetEnough55Mph}
+Trip duration: ${duration55Mph} hours`;
+
+// logo the result
+console.log(comparisonResults);
