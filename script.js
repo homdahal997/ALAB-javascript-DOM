@@ -79,16 +79,31 @@ const fuelExpense75Mph = fuelNeeded75Mph * fuelCostPerGallon;
 
 //is budget engough ?
 let isBudgetEnough55Mph = fuelExpense55Mph <= fuelbudget ? "yes" : "No";
-let isBudgetEnough60Mph = fuelExpense60Mph <= fuelbudget;
-let isBudgetEnough75Mph = fuelExpense75Mph <= fuelbudget;
+let isBudgetEnough60Mph = fuelExpense60Mph <= fuelbudget ? "yes" : "No";
+let isBudgetEnough75Mph = fuelExpense75Mph <= fuelbudget ? "yes" : "No";
 
 // Lets compare result for each speed
 
 const comparisonResults = `
 Results for traveling at 55 mph:
+--------------------------------
 Gallons of fuel needed: ${fuelNeeded55Mph}
 Will the budget cover the fuel expense? ${isBudgetEnough55Mph}
-Trip duration: ${duration55Mph} hours`;
+Trip duration: ${duration55Mph} hours
+
+Results for traveling at 60 mph:
+--------------------------------
+Gallons of fuel needed: ${fuelNeeded60Mph}
+Will the budget cover the fuel expense? ${isBudgetEnough60Mph}
+Trip duration: ${duration60Mph} hours
+
+
+Results for traveling at 60 mph:
+--------------------------------
+Gallons of fuel needed: ${fuelNeeded75Mph}
+Will the budget cover the fuel expense? ${isBudgetEnough75Mph}
+Trip duration: ${duration75Mph} hours
+`;
 
 // logo the result
 console.log(comparisonResults);
